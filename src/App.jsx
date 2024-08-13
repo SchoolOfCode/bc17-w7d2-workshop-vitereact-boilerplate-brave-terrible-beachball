@@ -29,26 +29,43 @@ function HeroOne() {
 }
 
 function HowItWorks() {
-  return<>
-
+  const [articleList] = useState([
+    {image: "src/assets/how-it-works-1.png", heading: "Give us a call...", bodyText: "Call us and book in a \'Design Consultation\' on a date and time to suit.", id: 1},
+    {image: "src/assets/how-it-works-1.png", heading: "We come to you...", bodyText: "We come to your home to do an assessment of the space and to your style preference.", id: 2},
+    {image: "src/assets/how-it-works-1.png", heading: "We recommend...", bodyText: "We send you a bespoke set of fireplace recommendation.", id: 3}
+  ]);
+  return ( 
+    <>
 <section className="how-it-works">
-                <h2>How it works.</h2>
+  { <h2>How it works.</h2> }
+  {articleList.map((article) => (
+    <div className="article-preview" key={article.id}>
+      <img src={article.image}></img>
+      <h2>{ article.heading }</h2>
+      <p>{ article.bodyText }</p>
+    </div>
+
+  ))}
+  </section>
+  </>
+  );
+}
                 
-                <img src="src/assets/how-it-works-1.png" alt="article-1"></img>
-                <h5>Give us a call...</h5>
-                <p>Call us and book in a "Design Consultation" on a date and time to suit.</p>
 
-                <img src="src/assets/how-it-works-2.png" alt="article-2"></img>
-                <h5>We come to you...</h5>
-                <p>We come to your home to do an assessment of the space and to your style preference.</p>
+function Footer() {
+  return (
+  <>
+  <footer className="footer">
+    <p>Find us on</p>
+    <p>Facebook </p>
+    <p>Instagram </p>
+    <p>TikTok </p>
+    <p> (C) Fireplace Palace 2024</p>
+    <p>info@firepalace.co.uk</p>
 
-                <img src="src/assets/how-it-works-3.png" alt="article-3"></img>
-                <h5>We recommend...</h5>
-                <p>We send you a bespoke set of fireplace recommendation.</p>
-
-            </section>
-            </>
-
+  </footer>
+  </>
+  )
 }
 
 function App() {
@@ -58,23 +75,13 @@ function App() {
       <body>
         <Header/>
         <div className="wrapper">
-        <main>
-            <HeroOne />
-            <HowItWorks />
-            
-        </main>
-    </div>
-        <footer className="footer">
-            <p>Find us on</p>
-                <p>Facebook </p>
-                <p>Instagram </p>
-                <p>TikTok </p>
-             
-              <p> (C) Fireplace Palace 2024</p>
-              <p>info@firepalace.co.uk</p>
-
-        </footer>
-    
+          <main>
+              <HeroOne />
+              <HowItWorks />
+              
+          </main>
+        </div>
+        <Footer />
 </body>
     </>
   )
