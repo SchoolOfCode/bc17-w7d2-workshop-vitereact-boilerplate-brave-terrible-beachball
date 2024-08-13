@@ -13,15 +13,10 @@ function Header() {
   )
 }
 
-function App() {
-  const [count, setCount] = useState(0)
-  return (
-    <>
-      <body>
-        {Header()}
-        <div className="wrapper">
-        <main>
-            <section className="hero-1">
+function HeroOne() {
+  return(
+  <>
+  <section className="hero-1">
                 <img src="src/assets/hero-desktop.png" alt="fireplace"></img>
                 <div className="call-to-action">
                     <h2>Discover the Perfect Fireplace...</h2>
@@ -29,7 +24,14 @@ function App() {
                 </div>
                 
             </section>
-            <section className="how-it-works">
+            </>
+  )
+}
+
+function HowItWorks() {
+  return<>
+
+<section className="how-it-works">
                 <h2>How it works.</h2>
                 
                 <img src="src/assets/how-it-works-1.png" alt="article-1"></img>
@@ -45,6 +47,21 @@ function App() {
                 <p>We send you a bespoke set of fireplace recommendation.</p>
 
             </section>
+            </>
+
+}
+
+function App() {
+  const [count, setCount] = useState(0)
+  return (
+    <>
+      <body>
+        <Header/>
+        <div className="wrapper">
+        <main>
+            <HeroOne />
+            <HowItWorks />
+            
         </main>
     </div>
         <footer className="footer">
