@@ -1,3 +1,6 @@
+import React, { useState } from 'react';
+
+
 export function HeroOneText(){
     const [text] = useState({heading: "Discover the perfect fireplace ...", subHeading: "Book consultation:", contactNumber: "0121 345 6789"})
     return (

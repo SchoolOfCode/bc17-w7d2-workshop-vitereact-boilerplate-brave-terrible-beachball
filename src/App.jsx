@@ -6,7 +6,7 @@ import {Header} from './components/Header/header.jsx'
 import {HeroOneImage} from './components/HeroOne/HeroImage/heroOneImg.jsx'
 import {HeroOneText} from './components/HeroOne/HeroText/HeroOneText.jsx'
 import {HowItWorks} from './components/HowItWorks/howItWorks.jsx'
-
+import {Footer} from './components/Footer/footer.jsx'
 
 
 function HeroOne() {
@@ -24,27 +24,13 @@ function HeroOne() {
 
                 
 
-function Footer() {
-  return (
-  <>
-  <footer className="footer">
-    <p>Find us on</p>
-    <p>Facebook </p>
-    <p>Instagram </p>
-    <p>TikTok </p>
-    <p> (C) Fireplace Palace 2024</p>
-    <p>info@firepalace.co.uk</p>
 
-  </footer>
-  </>
-  )
-}
 
 function App() {
   const [count, setCount] = useState(0)
   return (
     <>
-      <body>
+      <div>
         <Header/>
         <div className="wrapper">
           <main>
@@ -54,7 +40,7 @@ function App() {
           </main>
         </div>
         <Footer />
-</body>
+</div>
     </>
   )
 }
